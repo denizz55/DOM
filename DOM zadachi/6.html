@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form id="my-form">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        <input type="submit" value="Отправить">
+    </form>
+    <script>
+var form = document.getElementById("my-form");
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+  var nameField = document.getElementById("name").value;
+  var emailField = document.getElementById("email").value;
+  console.log("Имя:", nameField);
+  console.log("Email:", emailField);
+});
+    </script>
+</body>
+
+</html>
